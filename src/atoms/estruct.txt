@@ -1,0 +1,71 @@
+📁 Estrutura dos Arquivos
+
+Atoms 
+
+  * transformations
+    Contém todas as funções responsáveis por realizar transformações geométricas na imagem, 
+    como rotação, escala, entre outras.
+
+  * rectangle
+    Responsável pela criação do retângulo utilizado na área de recorte (crop).
+
+  *contextCrop e contextIntensity
+    são contextos( forma de compartilhar dados entre componentes sem precisar passar props 
+    manualmente por cada nível da árvore de componentes) sobre o crop e transformações de intensidade
+
+  *cropImage 
+    Desenha e retorna a parte da imagem cortada para poder renderizar
+    o retângulo para ser renderizado apenas dentro do canvas 
+  
+  *dragReact
+    contem a logica para desenho do retângulo via mouse que sera renderizado e chamado em imgView
+  
+  *drawImage
+    contem a logica para desenhar via canvas a imagem que sera renderizado e chamado em imgView
+
+  *intensity
+    contem o arquivo com as transformações de intensidade e temperatura que sera renderizado e chamado em imgView
+
+Molecules
+
+  *imgView
+    responsável pela renderização da imagem, aplicar as transformações, desenhar o retângulo do crop e reagir ao estados 
+
+  * leftPanel
+    Renderiza todas as funcionalidades da barra lateral (sidebar), incluindo controles de edição.
+
+  * menu
+    Responsável por renderizar a barra de navegação (navbar).
+
+Organisms
+
+  * menuItemCrop
+    Renderiza as opções de tipos de recorte disponíveis.
+
+  * menuItemTransforms
+    Renderiza os botões relacionados às transformações geométricas da imagem.
+
+  *menuItemAdjust
+    Renderiza a função extra para modificar a temperatura da imagem
+
+  *menuItemDetails
+    Renderiza as opções de trasnformações de luminosidade, mais voltada a detalhes, Contraste e Log
+
+  *menuItemIluminity
+    Renderiza as opções de trasformaç~eos de luminosidade, mais voltada a iluminação, Negativo e Gamma
+
+Pages
+
+  * main
+    Página principal da aplicação.
+    Suas responsabilidades incluem:
+
+    - Abrir o diretório de arquivos do computador
+    - Renderizar o menu (navbar)
+    - Renderizar o leftPanel
+
+  *indexPage
+    chama a pagina principal e a envolve com os providers (crop e intensity)
+
+
+

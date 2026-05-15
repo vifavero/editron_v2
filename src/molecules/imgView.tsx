@@ -38,8 +38,8 @@ export function ImageView({
   isPop,
   canvasRef,
 }: ImageViewProps) {
-  const [widthImg, setWidthImg] = useState(0);
-  const [heightImg, setHeightImg] = useState(0);
+  const [, setWidthImg] = useState(0);
+  const [, setHeightImg] = useState(0);
   const { state } = useIntensity();
   const { rect, image } = useCrop();
   const { setImageInfo } = useCrop();

@@ -60,6 +60,7 @@ export default function MainContent() {
 
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  const defaultPoint: Point = { width: 0, height: 0 };
 
   useEffect(() => {
     if (!ref.current) return;
@@ -106,7 +107,7 @@ export default function MainContent() {
               rotation={rotation}
               scaleX={scaleX}
               scaleY={scaleY}
-              isPop={isPop}
+              isPop={isPop ?? defaultPoint}
             />
           )}
         </div>

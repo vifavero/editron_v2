@@ -18,7 +18,6 @@ import type { Point } from "../pages/main";
 import { useIntensity } from "../atoms/contextIntesity";
 import { MdFormatColorReset } from "react-icons/md";
 import { MenuAdjust } from "../organisms/menuItemAdjust";
-import { Plus } from "lucide-react";
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { Item } from "../components/ui/item";
 

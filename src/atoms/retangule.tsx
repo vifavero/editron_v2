@@ -20,7 +20,7 @@ type Rect = {
   mouse?: (e: React.MouseEvent) => void;
 };
 
-export function Retangulo({ x, y, lrg, alt, mouse }: Rect) {
+export function Retangulo({ x, y, lrg, alt }: Rect) {
   return (
     <div
       style={{
